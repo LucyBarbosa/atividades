@@ -7,28 +7,19 @@ public class RenderMachine
     {
         clearConsole();
         System.out.println("Level: "+name);
-        System.out.println(lv[0][0] + "" + lv[0][1] + "" + lv[0][2] + "" + lv[0][3] + "" + lv[0][4]);
-        System.out.println(lv[1][0] + "" + lv[1][1] + "" + lv[1][2] + "" + lv[1][3] + "" + lv[1][4]);
-        System.out.println(lv[2][0] + "" + lv[2][1] + "" + lv[2][2] + "" + lv[2][3] + "" + lv[2][4]);
-        System.out.println(lv[3][0] + "" + lv[3][1] + "" + lv[3][2] + "" + lv[3][3] + "" + lv[3][4]);
-        System.out.println(lv[4][0] + "" + lv[4][1] + "" + lv[4][2] + "" + lv[4][3] + "" + lv[4][4]);
-        System.out.println(lv[5][0] + "" + lv[5][1] + "" + lv[5][2] + "" + lv[5][3] + "" + lv[5][4]);
-        System.out.println(lv[6][0] + "" + lv[6][1] + "" + lv[6][2] + "" + lv[6][3] + "" + lv[6][4]);
-        System.out.println(lv[7][0] + "" + lv[7][1] + "" + lv[7][2] + "" + lv[7][3] + "" + lv[7][4]);
-        System.out.println(lv[8][0] + "" + lv[8][1] + "" + lv[8][2] + "" + lv[8][3] + "" + lv[8][4]);
-        System.out.println(lv[9][0] + "" + lv[9][1] + "" + lv[9][2] + "" + lv[9][3] + "" + lv[9][4]);
-    }
-
-    private static void clearConsole() {
-        try {
-            if (System.getProperty("os.name").contains("Windows")) {
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            } else {
-                System.out.print("\033[H\033[2J");
-                System.out.flush();
+        System.out.println(x:"");
+        for (int i=0; i< rows; i++)
+        {
+            for (int j=0; j< column; j++)
+            {
+                System.out.print(Lv[i][j]);
             }
-        } catch (Exception e) {
+            System.out.println(x:"");
+        }
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
-}
+    }   
+}    

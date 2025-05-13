@@ -2,8 +2,13 @@ package level;
 
 public class Level01 {
 
-    private char [][] lv;
+    private String name ="DG01";
+    private String[][] lv;
     private float combatechance;
+    private boolean running = true;
+    private int column = 5;
+    private int rows = 10;
+
 
     public void setLv(char[][] Lv) {
         this.lv = Lv;
